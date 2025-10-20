@@ -24,7 +24,17 @@ Also, ensure your AWS CLI is configured with credentials:
 ```bash
 aws configure
 ```
+## SSH Key Setup
 
+Jenkins and Terraform require SSH keys to securely connect to your EC2 instances. If you don’t have an SSH key yet, follow these steps:
+
+```bash
+# Make sure the .ssh folder exists
+mkdir -p ~/.ssh
+
+# Generate a new SSH keypair named id_rsa
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
+```
 
 ## Scripts Overview
 
