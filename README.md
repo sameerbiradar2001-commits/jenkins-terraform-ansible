@@ -3,7 +3,7 @@
 This project automates the deployment of a Jenkins server on AWS using Terraform for infrastructure provisioning and Ansible for configuration management.
 
 
-echo "- **Scripts Overview:** `deploy_jenkins.sh` deploys Jenkins; `manage_server.sh` manages EC2 (start, stop, destroy)" >> README.md
+> ⚠️ **Note:** This project is designed to be run in **Windows Subsystem for Linux (WSL)** for best compatibility.
 
 
 ## Features
