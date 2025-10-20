@@ -19,3 +19,26 @@ Also, ensure your AWS CLI is configured with credentials:
 
 ```bash
 aws configure
+```
+
+
+## Scripts Overview
+
+### `deploy_jenkins.sh`
+Deploys Jenkins from scratch. This script will:
+- Check for required tools (Terraform, Ansible, AWS CLI)
+- Apply Terraform to create AWS resources
+- Generate Ansible hosts file
+- Run Ansible playbook to install Jenkins
+- Display Jenkins URL and initial admin password
+
+---
+
+### `manage_server.sh`
+Manage the EC2 instance after deployment:
+
+| Action  | Command                        | Description                              |
+|---------|--------------------------------|------------------------------------------|
+| Start   | `./manage_server.sh start`      | Start the EC2 instance                   |
+| Stop    | `./manage_server.sh stop`       | Stop the EC2 instance (data is preserved) |
+| Destroy | `./manage_server.sh destroy`    | Destroy the EC2 instance and all data   |
